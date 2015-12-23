@@ -1,0 +1,34 @@
+/*
+Use 6XX for self defined http status code
+*/
+601~650 client error
+
+651~699 request success
+
+
+601: Server doesn't recognize the restaurant by name
+602: Restaurant creation failed due to invalid fields
+603: Queue number is wrong
+604: Queue name not matching
+608: Restaurant processing failed due to unknown reason
+609: Queue processing failed due to unknown reason
+
+
+611: Server doesn't recognize the customer by name
+612: Customer creation failed due to invalid fields
+613: Customer processing failed due to unknown reason
+614: Customer creation failed due to duplicate name
+
+621: Ticket creation failed
+622: Ticket not found
+623: Ticket update failed
+
+651: Restaurant created as requested
+652: Restaurant updated as requested
+653: Queue created as requested
+654: Queue updated as requested
+655: Queue status found as requested
+656: Queue removed as requested
+661: Customer created as requested
+662: Customer updated as requested
+671: Customer successfully followed a restaurant.

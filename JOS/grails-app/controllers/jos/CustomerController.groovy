@@ -11,7 +11,26 @@ class CustomerController {
     static scaffolding=true;
 	
 	def addCustomer(){
-		
+		String customerName=params['customerId'];
+		String address=params["address"];
+		String mobile=params["mobile"];
+		String email=params["email"];
+		Customer cc=Customer.findByName(customerName);
+		if(cc!=null){
+			render(status: 614, text: 'Duplicate name.');
+		}else{
+			Customer c=new Customer(name:customerName,address:address,mobile:mobile,email:email);
+			c.save(flush:true);
+			if(c.hasErrors()){
+				println c.errors;
+				render(status: 613, text: 'Customer processing failed due to unknown reason');
+			}
+			else{
+				render(status: 661, text: "Customer created with name ${customerName}");
+			}
+
+		}
+
 	}
 	def addFollowing(){
 		String houseName=params["houseName"];
