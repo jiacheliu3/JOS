@@ -1,0 +1,78 @@
+# Use 6XX for self defined http status code
+
+601~670 client error
+
+**Restaurant**
+
+601: Server doesn't recognize the restaurant by name
+
+602: Restaurant creation failed due to invalid fields
+
+603：Restaurant name is invalid
+
+604: Restaurant id is invalid
+
+605: Duplicate restaurant name
+
+609: Restaurant processing failed due to unknown reason
+
+**Customer**
+
+611: Server doesn't recognize the customer by name
+
+612: Customer creation failed due to invalid fields
+
+614: Customer creation failed due to duplicate name
+
+619: Customer processing failed due to unknown reason
+
+**Ticket**
+
+621: Ticket creation failed
+
+622: Ticket not found
+
+623: Ticket update failed
+
+624: Ticket id is invalid
+
+629: Ticket processing failed due to unknow reason
+
+**Following**
+
+631: House followed by duplicate customer
+
+632: Customer following duplicate house
+
+**Queue**
+
+641: Queue creation failed due to duplicate name
+
+642: Queue not found by name
+
+643: Queue number is invalid
+
+644: Queue number has alread passed
+
+649: Queue processing failed due to unknown reason
+
+**User**
+
+651: User creation failed due to duplicate email
+
+652: User not found by email
+
+653: User password not matching. Authentication failed
+
+659: User creation failed due to unknown reason
+
+**Ad**
+
+661: Ad creation failed due to invalid house name
+
+662: Ad id is invalid
+
+663: Ad is not found by id
+
+669: Ad processing failed due to unknown reason
+
